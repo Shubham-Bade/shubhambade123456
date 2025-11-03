@@ -1,0 +1,13 @@
+name: Print Current Date and Time
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:  
+
+jobs:
+  print-datetime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print current date and time
+        run: echo "Current date and time: $(date)"
